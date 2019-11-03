@@ -1,6 +1,5 @@
 package com.microservices.javabrains.resources;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -13,7 +12,10 @@ import org.springframework.web.reactive.function.client.WebClient;
 
 import com.microservices.javabrains.model.CatalogItem;
 import com.microservices.javabrains.model.Movie;
+import com.microservices.javabrains.model.Rating;
 import com.microservices.javabrains.model.UserRating;
+import com.microservices.javabrains.service.MovieInfoService;
+import com.microservices.javabrains.service.UserRatingService;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 @RestController
@@ -26,20 +28,21 @@ public class MovieCatalogResource {
 	@Autowired
 	WebClient.Builder webClientBuilder;
 	
+	@Autowired
+	MovieInfoService movieInfoService;
+	
+	@Autowired
+	UserRatingService userRatingService;
+	
 	@RequestMapping("/{userId}")
-	@HystrixCommand(fallbackMethod = "getFallbackCatalog")
 	public List<CatalogItem> getCatalogItems(@PathVariable("userId") String userId) {
 		// step 1: get all rated movieID
-		UserRating ratings = restTemplate.getForObject("http://ratings-data-service/ratingsData/users/"+userId, UserRating.class);
+		UserRating ratings = userRatingService.getUserRating(userId);
 		
 		// step 2: for each movieId, call movie-info-service to get details
-		return ratings.getRatings().stream().map(rating -> {
-			 Movie movie = restTemplate.getForObject("http://movie-info-service/movies/"+rating.getMovieId(), Movie.class);
-
-			 // step 3: put them all together
-			 return new CatalogItem(movie.getName(), movie.getDescription(), rating.getRating());
-		})
-		.collect(Collectors.toList()); 			
+		return ratings.getRatings().stream()
+				.map(rating -> movieInfoService.getCatalogItem(rating))
+				.collect(Collectors.toList()); 			
 		
 		/**
 		 * return Collections.singletonList( 
@@ -47,9 +50,6 @@ public class MovieCatalogResource {
 		 */
 	}
 	
-	public List<CatalogItem> getFallbackCatalog(@PathVariable("userId") String userId) {
-		return Arrays.asList(new CatalogItem("No movie", "application down for now", 0));
-	}
 }
 /**
 Movie movie = webClientBuilder
