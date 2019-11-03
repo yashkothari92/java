@@ -1,5 +1,6 @@
 package com.microservices.javabrains.resources;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -13,6 +14,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 import com.microservices.javabrains.model.CatalogItem;
 import com.microservices.javabrains.model.Movie;
 import com.microservices.javabrains.model.UserRating;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 @RestController
 @RequestMapping("/catalog")
@@ -25,6 +27,7 @@ public class MovieCatalogResource {
 	WebClient.Builder webClientBuilder;
 	
 	@RequestMapping("/{userId}")
+	@HystrixCommand(fallbackMethod = "getFallbackCatalog")
 	public List<CatalogItem> getCatalogItems(@PathVariable("userId") String userId) {
 		// step 1: get all rated movieID
 		UserRating ratings = restTemplate.getForObject("http://ratings-data-service/ratingsData/users/"+userId, UserRating.class);
@@ -42,6 +45,10 @@ public class MovieCatalogResource {
 		 * return Collections.singletonList( 
 		 * new CatalogItem("Dark Knight", "penultimate movie of Dark Knight Trilogy", 5) );
 		 */
+	}
+	
+	public List<CatalogItem> getFallbackCatalog(@PathVariable("userId") String userId) {
+		return Arrays.asList(new CatalogItem("No movie", "application down for now", 0));
 	}
 }
 /**
