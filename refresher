@@ -1,0 +1,78 @@
+-----------------NIIT Tech---------------------
+
+1. JDK vs JRE
+
+2. jar vs war
+
+3. Abstract class Vs Interface
+        Interface contains common method prototype
+        Abstact class contains common method behaviour
+        Concrete class contains specific method behaviour
+
+4. What is Serialization
+   A process of saving state of an object in a file
+
+5. transient Vs static
+
+6. Checked Exception Vs Unchecked Exception
+
+7. What is exception handling?
+
+8. what is 'finally' block?
+        System.exit() won't allow finally block to execute
+
+9. Synchronization in threads?
+
+10. Runnable interface Vs Thread class - which one is better?
+
+11. Enum
+
+12. Autoboxing
+
+13. Design patterns? Singleton design method?
+
+14. WSDL file?
+
+15.SOAP Webservice Vs REST Webservice
+
+16. JSP implicit objects?
+
+17. Features of Spring
+
+18. What is @Autowired annotation?
+
+19. Main interfaces of Spring (BeanFactory Vs XmlPathApplicationContext)
+
+20. How to create Bean object in Spring?
+
+21. Main interface in Hibernate
+
+22. load vs get metho in Hibernate
+
+23. How to save object in database
+        ConfigurationObject cfg
+        SessionFactory
+
+24. Inheritance mapping in Spring
+
+-----------------CISCO---------------------
+
+25. Immutable class
+
+26. Comparable Vs Comparator
+
+27. Sort based on multiple fields
+
+28. HashSet vs LinkedHashSet
+
+29. Collection stores in a {key, value} pair - how to sort?
+
+30. wait Vs sleep
+
+31. Spring Bean scopes
+
+32. Lazy loading Vs Aggresive loading
+
+33. Cascade attribute? (Hibernate)
+
+--------------MPhasis--------------------
