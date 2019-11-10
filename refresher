@@ -1,4 +1,4 @@
------------------NIIT Tech---------------------
+-----------------1) NIIT Tech---------------------
 
 1. JDK vs JRE
 
@@ -55,7 +55,7 @@
 
 24. Inheritance mapping in Spring
 
------------------CISCO---------------------
+-----------------2) 4) CISCO---------------------
 
 25. Immutable class
 
@@ -75,7 +75,6 @@
 
 33. Cascade attribute? (Hibernate)
 
---------------MPhasis--------------------
 ----------------3) MPhasis--------------------
 34. Exception handling scenario - Base exception by 1st method, Child Exception by 2nd method
 
