@@ -76,3 +76,227 @@
 33. Cascade attribute? (Hibernate)
 
 --------------MPhasis--------------------
+----------------3) MPhasis--------------------
+34. Exception handling scenario - Base exception by 1st method, Child Exception by 2nd method
+
+35. Hibernate - various Object states
+        Transient, Persistent, Detached
+
+36. Hibernate - use case when changing ID (unique idetifier) along with other field (for e.g. Age) - what will happen?
+
+37. Spring - what will happen when same beanID is specified for multiple bean class?
+
+38. Stored Procedure
+
+39. Interface - how to access variable defined in interface from other class
+
+40. logging
+
+----------------5) Capgemini------------------
+41. New features of Java 8
+        Lambda,
+42. use of default & static method in interface (added functionality as part of Java 8)
+
+43. Atomic variable
+
+43A. CountDownLatch
+
+44. synchronization and diff. between obj. level lock and class level lock
+
+45. Example of left outer join
+
+46. what are the types of statements available in JDBC and how it differs with eachother?
+
+47. what is externalizable interface and how it differs with serializable interface?
+
+48. what are webservices? Explain REST abbrevation and its usage. why it is called Representational State Transfer?
+
+49. How data consumes in Rest webservice.
+
+50. which design patterns you've used?
+
+51. what are the differences between abstract factory design pattern and factory-method design pattern?
+
+---------------6) Philips------------------
+
+52. Spring REST Service
+        get, put, post, delete- which is idempotent
+
+53. Design patterns
+
+54. Factory Design pattern Vs Abstract design pattern
+
+55. how do you use element in CSS? By name or By Type
+
+56. Equijoin vs left outer vs right outer
+        Default join
+
+57. Preprocessor, PostProcessor, Filter, Handler, URLMapper, ViewResolver
+        order of each HTTP request ?
+
+58. use of URL Mapper
+
+59. use of Autowiring
+
+60. Aspect Oriented programming
+
+61. Mutable Non-mutable types in Java
+
+62. Best practices in Garbage collection
+
+63. How do you resolve Null Pointer Exception
+
+-------------------7) HCL---------------------
+64. Can you just tell me what is new in Java 8?
+
+65. What is the difference between Collection API and Streams API? What is the value added by streams actually?
+
+66. What is the use of generics? How generics help developer?
+
+67. Which case do you use ? (Question Mark) in generics?
+
+68. Thread life cycle?
+
+69. What is Concurrent Hashmap? Compare it with Hashmap.
+                                                          
+70. Can we add a new entry to Hashmap while iterating?
+
+71. I have a set of elements which are not duplicates. Which collection you would use to store these objects?
+
+72. Can you explain the hashing technique to make Java store all specific objects in one bucket?
+
+73. When you say multi threading. Is it of any use in single core system?
+
+74. Do you have any idea of Servlet filter? Explain the purpose and where would you use?
+
+75. Can I modify the request headers in the filter?
+
+76. What is the design pattern used in Spring IOC?
+
+77. Do you have deep knowledge of design patterns?
+
+78. Do you know what design pattern is used in java IO stream?
+
+79. When can I go with REST API, When can I go with SOAP?
+
+80. Do you see any positive part of using SOAP web service with XML?
+
+81. What are the different scopes of spring bean?
+
+--------------------8) Cognizant------------------------
+82. JUnit, Mocking frameworks
+
+83. JPA
+
+84. SOAP Webservice, REST Webservice (security? which one?)
+
+85. Design patters, Singleton, Factory, MVC design_pattern, FrontController design pattern, DAO design pattern - why?
+
+86. Constructor injection Vs setter injection (why should I use one over another?)
+
+87. Hibernate - caching mechanism
+
+88. when does cache expire?
+
+89. advantages of ORM over JDBC?
+
+90. Hibernate - Dialect class
+
+91. What is Immutable class - examples of it? - How to create Custom Immutable class? - how it is useful?
+
+92. Hashcode & Equals contract
+
+93. Concurrent HashMap
+
+--------------------9) Photon Infotech-------------------
+94. Can we put Employee object as a key to hashmap (overrride Hashmap & Equals)
+
+95. HashMap collision - how does it handle
+
+96. How to write Custom Exception (Checked, Unchecked Exception)
+
+97. Anonymous Inner class
+
+98. One table (100 rows) - uniquely identified by 4 different attr - which collection is suitable so end user tries to access any record by unique key gets all details? ANS:Comparator?
+
+99. Threadpool parameters (ExecutorService, FixedThreadPool)
+
+100. flow
+        presentation, controller, service, model
+        input.jsp: submit -> web.xml: dispatcher servlet -> (url) : handler mapping -> which controller (is responsible to serve this request) -> service or model
+                        contorller (response) -> ViewLogicalName -> dispatcher :  ViewResolver
+
+101. component-scan
+     annotation-config
+102. how to enable auto sequence to table attr in Hibernate ? [Ans:@Id to PK, @GeneratedValue to enable Auto generated seq]
+
+103. Hibernate template (all txns related stuff is being handled internally by API used in Hibernate Template)
+
+104. Injecting beans
+        Explicit (Constructor Vs Setter)
+        Implicit (ByName, ByType, ByConstructor)
+
+105. How to construct JSON object? (process using JSON token)
+
+106. How to convert xml response to JSON response (JAX-B)
+
+-------------------10.1)
+
+107. Design priciples of OOPS
+        Abstraction, Encapsulation, Inheritance, Polymorphism
+        SOLID
+        (Single Responsibility Principle)
+        (Open/Closed priciple)
+        (Liskov Substitution)
+        (Interface Segregation)
+        (Dependency Inversion)
+
+
+------------------11) -------------------
+108. substring - will it create new string?
+
+109. split vs substring
+
+110. A file having so many words -  find most frequent word in a file
+
+111. methods in Object class
+        wait
+        wait(long)
+        wait(long, int)
+        notify
+        notifyAll
+        getClass
+        clone
+        equals
+        toString
+        hashCode
+        finalize
+
+112. why do we have wait, notify in Object class (despite of being used in Multithreading)?
+        wait & notify - locking/unlocking on object
+
+113. synchronized keyword -> synchronized method/block - why one is preferred over another?
+
+114. Approach to convert old EJB project to Spring MVC
+
+115. what is dispatcher servlet
+
+116. what is dependency injection
+
+117. Servlet container - usage
+
+118. why to use FactoryPattern
+        centralize instance creation, resolve 'tight coupling' problem
+
+119. self join
+
+120. why indexes
+
+121. how do you specify Query Parameter in web-service
+
+122. why webservice is required?
+
+123. Spring data - repositories
+
+124. pagination, query caching
+
